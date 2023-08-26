@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-class FlashScreen extends StatelessWidget {
-  const FlashScreen({super.key});
+class StartScreen extends StatelessWidget {
+  const StartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Center(child:Padding(
+    return Center(child:Padding(
       padding: const EdgeInsets.only(top: 50, left: 20, right: 20,bottom: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset("images/quiz-logo.png",width: 300,),
+          // Opacity(opacity: 0.6,child: Image.asset("images/quiz-logo.png",width: 300,)),
+          //or
+          Image.asset("images/quiz-logo.png",width: 300, color: Color.fromARGB(150, 255, 255, 255),),
           const SizedBox(height: 50,),
           const Text("Flutter",style:TextStyle(fontSize: 50.0,fontWeight: FontWeight.w600,color: Colors.white),),
           const SizedBox(height: 50,),
