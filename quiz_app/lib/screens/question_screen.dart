@@ -17,6 +17,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
            Text(
             currentQuestion.text,
@@ -25,10 +26,15 @@ class _QuestionScreenState extends State<QuestionScreen> {
           const SizedBox(
             height: 20,
           ),
-          AnswerButton(answerText:currentQuestion.answers[0], onTap: () {}),
-          AnswerButton(answerText: currentQuestion.answers[1], onTap: () {}),
-          AnswerButton(answerText: currentQuestion.answers[2], onTap: () {}),
-          AnswerButton(answerText: currentQuestion.answers[3], onTap: () {}),
+          //dynamic
+          ...currentQuestion.answers.map((answer) {   //(...) - this make the list to come out have same list ;[[1,2,3],4,5] to [1,2,3,4,5]
+            return AnswerButton(answerText: answer, onTap: () {});
+          }),
+          //static
+          // AnswerButton(answerText:currentQuestion.answers[0], onTap: () {}),
+          // AnswerButton(answerText: currentQuestion.answers[1], onTap: () {}),
+          // AnswerButton(answerText: currentQuestion.answers[2], onTap: () {}),
+          // AnswerButton(answerText: currentQuestion.answers[3], onTap: () {}),
 
         ],
       ),
