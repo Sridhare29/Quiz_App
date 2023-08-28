@@ -13,7 +13,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
     final currentQuestion = questions[0];
-    return SizedBox(
+    return Container(
+      margin: const EdgeInsets.all(40),
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -22,6 +23,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
            Text(
             currentQuestion.text,
             style:const TextStyle(color: Colors.white),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(
             height: 20,
