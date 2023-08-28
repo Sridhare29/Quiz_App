@@ -29,7 +29,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
         children: [
            Text(
             currentQuestion.text,
-            style:const TextStyle(color: Colors.white),
+            style:const TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),
             textAlign: TextAlign.center,
           ),
           const SizedBox(
