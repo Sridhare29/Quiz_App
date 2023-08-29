@@ -41,6 +41,7 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     Widget screenWidget = StartScreen(SwitchScreen);
 
     if (actionScreen == 'question-Screen') {
